@@ -1,0 +1,14 @@
+{
+  "name": "prompt-enhancer",
+  "version": "1.0.0",
+  "description": "AI Prompt Enhancer Application",
+  "scripts": {
+    "dev": "vercel dev"
+  },
+  "dependencies": {
+    "openai": "^4.20.1"
+  },
+  "devDependencies": {
+    "vercel": "^28.4.0"
+  }
+}

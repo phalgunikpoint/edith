@@ -188,12 +188,11 @@ module.exports = async (req, res) => {
     const enhancementInstruction = `Enhance the following prompt using ${style} style with creativity level ${creativity}/10.\nApply prompt engineering best practices to make it more effective for AI interaction.\nReturn only the enhanced prompt without any additional explanations.`;
 
     const completion = await openai.chat.completions.create({
-      model: 'gpt-3.5-turbo',
+      model: '', // TODO: use latest model
       messages: [
         { role: 'system', content: enhancementInstruction },
         { role: 'user', content: prompt }
       ],
-      max_tokens: 500,
       temperature: (creativity || 5) / 10,
     });
 
